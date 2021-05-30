@@ -14,3 +14,6 @@ login to database:
 ```bash
 docker exec -it postgres psql -U postgres
 ```
+
+cheatsheet https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
+
