@@ -15,5 +15,8 @@ login to database:
 docker exec -it postgres psql -U postgres
 ```
 
-cheatsheet https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
+cheatsheet
+---|
+https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
+https://www.postgresqltutorial.com/postgresql-cheat-sheet/
 
