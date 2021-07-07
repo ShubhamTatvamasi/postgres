@@ -18,8 +18,8 @@ docker exec -it postgres psql -U postgres
 run pgadmin4:
 ```bash
 docker run -p 80:80 \
-    -e 'PGADMIN_DEFAULT_EMAIL=admin' \
-    -e 'PGADMIN_DEFAULT_PASSWORD=admin' \
+    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \
+    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \
     -d dpage/pgadmin4
 ```
 
