@@ -1,6 +1,6 @@
 # psql
 
-Exit
+quit
 ```
 \q
 ```
