@@ -22,6 +22,10 @@ connect to different database
 
 list all tables
 ```
-\d 
+\d
 ```
 
+list table information
+```
+\d person
+```
