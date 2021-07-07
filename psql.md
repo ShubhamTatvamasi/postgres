@@ -19,3 +19,9 @@ connect to different database
 ```
 \c test-db
 ```
+
+list all tables
+```
+\d 
+```
+
