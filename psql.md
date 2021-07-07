@@ -1,8 +1,14 @@
 # psql
 
-exit:
+Exit
 ```
 \q
 ```
+
+List of databases
+```
+\l
+```
+
 
 
