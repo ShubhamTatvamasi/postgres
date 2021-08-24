@@ -2,11 +2,16 @@
 
 ### docker
 
+install psql:
+```bash
+sudo apt install postgresql-client
+```
+
 start postgres container:
 ```bash
 docker run -d -p 5432:5432 \
   --name postgres \
-  -e POSTGRES_PASSWORD=password \
+  -e POSTGRES_PASSWORD=postgres \
   postgres
 ```
 
