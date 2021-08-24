@@ -28,6 +28,17 @@ docker run -p 80:80 \
     -d dpage/pgadmin4
 ```
 
+### kubernetes
+
+create postgres pod on kubernetes:
+```bash
+kubectl run postgres --image=postgres \
+  --env=POSTGRES_PASSWORD=postgres \
+  --env=POSTGRES_DB=magma \
+  --expose --port=5432
+```
+
+
 cheatsheet
 ---|
 https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546
