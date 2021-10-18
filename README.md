@@ -8,6 +8,7 @@ helm repo update
 helm upgrade -i postgresql bitnami/postgresql \
   --set postgresqlPassword=postgres \
   --set postgresqlDatabase=magma \
+  --set persistence.storageClass=openebs-jiva-csi-default \
   --set replication.enabled=true \
   --set replication.readReplicas=2
 ```
