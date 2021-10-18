@@ -1,5 +1,18 @@
 # postgres
 
+Install postgresql:
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+
+helm upgrade -i postgresql bitnami/postgresql \
+  --set postgresqlPassword=postgres \
+  --set postgresqlDatabase=magma \
+  --set replication.enabled=true \
+  --set replication.readReplicas=2
+```
+
+
 ### docker
 
 install psql:
