@@ -14,6 +14,14 @@ helm upgrade -i postgresql bitnami/postgresql \
 ```
 
 
+Deploy Postgresql High Availability 
+```bash
+helm upgrade -i postgresql-ha bitnami/postgresql-ha \
+  --set postgresql.password=postgres \
+  --set postgresql.database=magma \
+  --set postgresql.replicaCount=3
+```
+
 ### docker
 
 install psql:
