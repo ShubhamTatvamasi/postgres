@@ -19,7 +19,8 @@ Deploy Postgresql High Availability
 helm upgrade -i postgresql-ha bitnami/postgresql-ha \
   --set postgresql.password=postgres \
   --set postgresql.database=magma \
-  --set postgresql.replicaCount=3
+  --set postgresql.replicaCount=3 \
+  --set persistence.storageClass=openebs-hostpath
 ```
 
 create a service with name `postgresql`:
