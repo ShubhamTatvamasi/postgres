@@ -22,6 +22,27 @@ helm upgrade -i postgresql-ha bitnami/postgresql-ha \
   --set postgresql.replicaCount=3
 ```
 
+create a service with name `postgresql`:
+```yaml
+kubectl create -f - << EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresql
+  namespace: orc8r
+spec:
+  ports:
+    - name: postgresql
+      protocol: TCP
+      port: 5432
+      targetPort: postgresql
+  selector:
+    app.kubernetes.io/component: postgresql
+    app.kubernetes.io/instance: postgresql-ha
+    app.kubernetes.io/name: postgresql-ha
+EOF
+```
+
 connect to magma database:
 ```bash
 PGPASSWORD=postgres psql -U postgres -d magma
