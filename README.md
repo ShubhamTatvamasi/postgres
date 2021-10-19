@@ -22,6 +22,11 @@ helm upgrade -i postgresql-ha bitnami/postgresql-ha \
   --set postgresql.replicaCount=3
 ```
 
+connect to magma database:
+```bash
+PGPASSWORD=postgres psql -U postgres -d magma
+```
+
 ### docker
 
 install psql:
