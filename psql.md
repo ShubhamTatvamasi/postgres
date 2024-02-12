@@ -20,6 +20,11 @@ connect to different database
 \c test-db
 ```
 
+execute commands from file
+```
+\i example.sqlc
+```
+
 list all tables
 ```
 \d
