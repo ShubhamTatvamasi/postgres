@@ -15,6 +15,11 @@ helm upgrade -i postgresql bitnami/postgresql \
   --set auth.database=test
 ```
 
+Connect to database:
+```bash
+PGPASSWORD=postgres psql -h 172.29.249.188 -U postgres -d test
+```
+
 ---
 
 ### OLD
