@@ -1,5 +1,24 @@
 # postgres
 
+Install `psql`:
+```bash
+brew install libpq
+echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
+```
+
+Deploy postgresql:
+```bash
+helm upgrade -i postgresql bitnami/postgresql \
+  --version 16.0.0 \
+  --set primary.service.type=LoadBalancer \
+  --set auth.postgresPassword=postgres \
+  --set auth.database=test
+```
+
+---
+
+### OLD
+
 Install postgresql:
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
