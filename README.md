@@ -9,7 +9,7 @@ echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc
 Deploy postgresql:
 ```bash
 helm upgrade -i postgresql bitnami/postgresql \
-  --version 16.0.0 \
+  --version 16.7.26 \
   --set primary.service.type=LoadBalancer \
   --set auth.postgresPassword=postgres \
   --set auth.database=test
