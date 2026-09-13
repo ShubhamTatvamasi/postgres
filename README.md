@@ -1,5 +1,16 @@
 # postgres
 
+Install postgres:
+```
+helm upgrade -i postgres \
+  oci://registry-1.docker.io/cloudpirates/postgres \
+  --set auth.password="postgres"
+```
+
+---
+
+### OLD
+
 Install `psql`:
 ```bash
 brew install libpq
@@ -20,9 +31,7 @@ Connect to database:
 PGPASSWORD=postgres psql -h 172.29.249.188 -U postgres -d test
 ```
 
----
 
-### OLD
 
 Install postgresql:
 ```bash
